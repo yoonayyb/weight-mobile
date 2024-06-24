@@ -1,0 +1,566 @@
+{
+
+
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"insetLoader": {
+		//配置
+		"config": {
+			//将需要引入的组件名起了个confirm的名字在下面label中使用
+			//右侧"<test ref='confirm' />"为需要插入的组件标签
+			"confirm": "<impopup ref='confirm' />"
+
+		},
+		// 全局配置  
+		//需要挂在的组件名
+		"label": ["confirm"],
+		//根元素的标签类型 也就是插入到页面哪个根元素下默认为div 但是uniapp中需要写为view
+		"rootEle": "view"
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "均衡代谢管理",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#727272",
+		"selectedColor": "#00B8A2",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabbar/diary",
+				"iconPath": "static/tabbarIcon/tab/tab_icon_news_nor@2x.png",
+				"selectedIconPath": "static/tabbarIcon/tab/tab_icon_news_sel@2x.png",
+				"text": "发现"
+			},
+			{
+				"pagePath": "pages/tabbar/shoppingMall",
+				"iconPath": "static/tabbarIcon/tab/tab_icon_shop_nor@2x.png",
+				"selectedIconPath": "static/tabbarIcon/tab/tab_icon_shop_sel@2x.png",
+				"text": "商城"
+			},
+			{
+				"pagePath": "pages/tabbar/record",
+				"iconPath": "static/tabbarIcon/tab/diary.png",
+				"selectedIconPath": "static/tabbarIcon/tab/diary.png",
+				"text": ""
+			},
+
+			{
+				"pagePath": "pages/tabbar/projects",
+				"iconPath": "static/tabbarIcon/tab/tab_icon_diary_nor@2x.png",
+				"selectedIconPath": "static/tabbarIcon/tab/tab_icon_diary_sel@2x.png",
+				"text": "日记"
+			},
+			{
+				"pagePath": "pages/tabbar/mine",
+				"iconPath": "static/tabbarIcon/tab/tab_icon_home_nor@2x.png",
+				"selectedIconPath": "static/tabbarIcon/tab/tab_icon_homepage_sel@2x.png",
+				"text": "我的"
+			}
+		]
+	},
+	"requiredPrivateInfos": ["chooseAddress", "getLocation"],
+	"pages": [{
+			"path": "pages/tabbar/diary",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"enablePullDownRefresh": true
+
+			}
+		},
+		{
+			"path": "pages/tabbar/record",
+			"style": {
+				"navigationBarTitleText": "记录"
+			}
+		},
+		{
+			"path": "pages/tabbar/projects",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		},
+		{
+			"path": "pages/tabbar/shoppingMall",
+			"style": {
+
+				"navigationStyle": "custom",
+				"disableScroll": true
+				// "enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/mine",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationStyle": "custom"
+			}
+		}
+
+	],
+	"subPackages": [{
+			"root": "pages/newHome",
+			"pages": [{
+					"path": "index",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "nutrition/foodSearch",
+					"style": {
+						"navigationBarTitleText": "添加食物"
+					}
+				},
+				{
+					"path": "nutrition/nutritionSetting",
+					"style": {
+						"navigationStyle": "custom"
+					}
+
+				}, {
+					"path": "nutrition/setWater",
+					"style": {
+						"navigationBarTitleText": "设置喝水量"
+					}
+				},
+				{
+					"path": "nutrition/addFood",
+					"style": {
+						"navigationBarTitleText": "添加食物"
+					}
+				}, {
+					"path": "nutrition/addSportCustom",
+					"style": {
+						"navigationBarTitleText": "添加自定义运动"
+					}
+				}, {
+					"path": "nutrition/addCustomFood",
+					"style": {
+						"navigationBarTitleText": "添加自定义食物"
+					}
+				},
+				{
+					"path": "record/index",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "fill/index",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+
+			]
+		},
+		{
+			"root": "pages/search",
+			"pages": [{
+					"path": "myVideo",
+					"style": {
+						"navigationBarTitleText": "我的视频",
+						"enablePullDownRefresh": true
+
+					}
+				},
+
+				{
+					"path": "push",
+					"style": {
+						"navigationBarTitleText": "发布视频"
+					}
+				},
+				{
+					"path": "diarySearch",
+					"style": {
+						"navigationBarTitleText": "搜索"
+					}
+				},
+				{
+					"path": "column",
+					"style": {
+						"navigationBarTitleText": "栏目"
+					}
+				},
+				{
+					"path": "topic",
+					"style": {
+						"navigationBarTitleText": "搜索",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "topicSearch",
+					"style": {
+						"navigationBarTitleText": "搜索话题"
+
+					}
+				},
+				{
+					"path": "articleDetail",
+					"style": {
+						"navigationBarTitleText": "推文详情"
+					}
+				}
+
+			]
+		},
+
+		{
+			"root": "pages/home",
+
+			"pages": [{
+					"path": "poster/poster",
+					"style": {
+
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "shoppingMall/goodsDetails",
+					"style": {
+						"navigationBarTitleText": "商品详情"
+					}
+				},
+
+				{
+					"path": "shoppingMall/shopSearch",
+					"style": {
+						"navigationBarTitleText": "搜索"
+					}
+				},
+				{
+					"path": "shoppingMall/searchShopping",
+					"style": {
+						"navigationBarTitleText": "商品搜索"
+					}
+				},
+				{
+					"path": "shoppingMall/submitOrder",
+					"style": {
+						"navigationBarTitleText": "填写订单"
+					}
+				},
+				{
+					"path": "shoppingMall/cart",
+					"style": {
+						"navigationBarTitleText": "购物车"
+					}
+				},
+				{
+					"path": "shoppingMall/pay",
+					"style": {
+						"navigationBarTitleText": "订单支付"
+					}
+				}
+			]
+		},
+
+		{
+			"root": "pages/message",
+			"pages": [{
+				"path": "messageChat",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}]
+		},
+		{
+			"root": "pages/login",
+			"pages": [{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "登录",
+						"app-plus": {
+							"titleNView": false
+						}
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/order",
+			"pages": [{
+					"path": "order",
+					"style": {
+						"navigationBarTitleText": "我的订单"
+					}
+				},
+				{
+					"path": "refund",
+					"style": {
+						"navigationBarTitleText": "售后订单"
+					}
+				},
+				{
+					"path": "orderDetails",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "refundDetails",
+					"style": {
+						"navigationBarTitleText": "售后详情"
+					}
+				},
+
+				{
+					"path": "logistics",
+					"style": {
+						"navigationBarTitleText": "查看物流"
+					}
+				},
+				{
+					"path": "refund_progress",
+					"style": {
+						"navigationBarTitleText": "售后进度详情"
+					}
+				},
+				{
+					"path": "applyAfterSales",
+					"style": {
+						"navigationBarTitleText": "申请售后"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/mine",
+			"pages": [{
+					"path": "manage/index",
+					"style": {
+						"navigationBarTitleText": "会员管理",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "manage/detail",
+					"style": {
+						"navigationBarTitleText": "会员资料"
+					}
+				},
+				{
+					"path": "manage/ask",
+					"style": {
+						"navigationBarTitleText": "问卷"
+
+
+					}
+				},
+				{
+
+					"path": "manage/picture",
+					"style": {
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "white"
+					}
+				},
+				{
+
+					"path": "manage/guishu",
+					"style": {
+						"navigationBarTitleText": "归属信息"
+					}
+				},
+				{
+					"path": "manage/interventionRecord",
+					"style": {
+						"navigationBarTitleText": "干预记录"
+					}
+				},
+				{
+					"path": "message/index",
+					"style": {
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "white"
+					}
+				},
+				{
+					"path": "personalInfo/personalInfo",
+					"style": {
+						"navigationBarTitleText": "个人信息"
+					}
+				},
+
+
+				{
+					"path": "address/address",
+					"style": {
+						"navigationBarTitleText": "收货地址"
+					}
+				},
+				{
+					"path": "address/createdAddress",
+					"style": {
+						"navigationBarTitleText": "添加收货地址"
+					}
+				},
+
+
+				{
+					"path": "setting/setting",
+					"style": {
+						"navigationBarTitleText": "账号设置"
+					}
+				},
+				{
+					"path": "setting/infoPush",
+					"style": {
+						"navigationBarTitleText": "消息推送设置"
+					}
+				},
+				{
+					"path": "setting/suggest",
+					"style": {
+						"navigationBarTitleText": "意见"
+					}
+				},
+				{
+					"path": "setting/feedback",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				},
+				{
+					"path": "invite/doctorRegister",
+					"style": {
+						"navigationBarTitleText": "医生注册"
+					}
+				},
+				{
+					"path": "invite/saleRegister",
+					"style": {
+						"navigationBarTitleText": "销售代表注册"
+					}
+				},
+				{
+					"path": "invite/updatePersonalInfo",
+					"style": {
+						"navigationBarTitleText": "完善个人信息"
+					}
+				}
+
+
+			]
+		},
+		{
+			"root": "pages/question",
+			"pages": [
+				{
+				"path": "question1",
+				"style": {
+					"navigationBarTitleText": "知情同意书",
+					"navigationStyle": "custom"
+				}
+			},
+			{
+				"path": "questionIndex",
+				"style": {
+					"navigationBarTitleText": "营养测评问卷"
+					
+				}
+			},
+			{
+				"path": "question2",
+				"style": {
+					"navigationBarTitleText": "营养测评问卷",
+					"navigationStyle": "custom"
+				}
+			},
+			{
+				"path": "question3",
+				"style": {
+					"navigationBarTitleText": "营养测评问卷",
+					"navigationStyle": "custom"
+				}
+			}
+			]
+		},
+		{
+			"root": "packages/bodyFatScale",
+			"pages": [{
+					"path": "connect/connect",
+					"style": {
+						"navigationBarTitleText": "连接体脂秤"
+					}
+				},
+				{
+					"path": "myHealthReport/index",
+					"style": {
+						"navigationBarTitleText": "测量报告"
+
+					}
+				},
+				{
+					"path": "myHealthReport/bfp",
+					"style": {
+						"navigationBarTitleText": "数据报告"
+				
+					}
+				},
+				{
+					"path": "myHealthReport/bfpCanvas",
+					"style": {
+						"navigationBarTitleText": "海报"
+				
+					}
+				},
+				{
+					"path": "myHealthReport/history",
+					"style": {
+						"navigationBarTitleText": "历史数据"
+					}
+				},
+				{
+					"path": "myHealthReport/compare",
+					"style": {
+						"navigationBarTitleText": "对比报告"
+					}
+				},
+				{
+					"path": "myHealthReport/compareCanvas",
+					"style": {
+						"navigationBarTitleText": "海报"
+					}
+				},
+				{
+					"path": "myHealthReport/share",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+			],
+			"plugins": {
+				"ICDeviceManager": {
+					"version": "0.3.18",
+					"provider": "wx8bbfa3009f30f5d8"
+				}
+			}
+		},
+		{
+			"root": "pages/answer",
+			"pages": [
+
+			]
+		},
+
+		{
+			"root": "pages/changePlanInfo",
+			"pages": [{
+				"path": "index",
+				"style": {
+					"navigationBarTitleText": "干预详情"
+				}
+			}]
+		}
+	]
+}

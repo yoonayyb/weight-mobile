@@ -1,0 +1,30 @@
+{
+	"name": "mobile",
+	"version": "1.0.0",
+	"description": "```bash\r 小程序需要使用hbuilderx点击发行 这样才会压缩代码 如果直接运行是不可以发布的，因为没有压缩代码所以体积太大，只能用来开发调试。\r # 注：该小程序对'我的'模块进行了分包 如后续主包代码还是超过2m 可以继续对其他模块进行分包，我把5个tabbar页面单独放一块，是为了更方便进行分包",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.nrp100.net:weightmanager/mobile.git"
+	},
+	"license": "ISC",
+	"keywords": [
+		"签名,签字,svg,canvas"
+	],
+	"dependencies": {
+		"crypto-js": "^4.2.0",
+		"vue": "^2.7.16",
+		"vue-inset-loader": "^1.2.6"
+	},
+	"devDependencies": {
+		"@types/html5plus": "^1.0.2",
+		"@types/uni-app": "^1.4.4",
+		"compression-webpack-plugin": "^4.0.0",
+		"vue-loader": "^17.4.2",
+		"vue-template-compiler": "^2.7.16",
+		"webpack": "^5.32.0"
+	}
+}
